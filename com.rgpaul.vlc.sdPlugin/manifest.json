@@ -104,20 +104,92 @@
             "SupportedInMultiActions": true,
             "Tooltip": "Decrease the volume.", 
             "UUID": "com.rgpaul.vlc.volumedown"
+        },
+        {
+            "Icon": "images/actions/volume_mute", 
+            "Name": "Mute",
+            "States": [
+                {
+                    "Image": "images/keys/volume_mute"
+                }
+            ], 
+            "SupportedInMultiActions": true,
+            "Tooltip": "Mute the volume.", 
+            "UUID": "com.rgpaul.vlc.volumemute"
+        },
+        {
+            "Icon": "images/actions/volume_256", 
+            "Name": "Volume 256",
+            "States": [
+                {
+                    "Image": "images/keys/volume_256"
+                }
+            ], 
+            "SupportedInMultiActions": true,
+            "Tooltip": "volume change to 256.", 
+            "UUID": "com.rgpaul.vlc.volume256"
+        },
+        {
+            "Icon": "images/actions/volume_100", 
+            "Name": "Volume 100",
+            "States": [
+                {
+                    "Image": "images/keys/volume_100"
+                }
+            ], 
+            "SupportedInMultiActions": true,
+            "Tooltip": "volume change to 100.", 
+            "UUID": "com.rgpaul.vlc.volume100"
+        },
+        {
+            "Icon": "images/actions/forward_30", 
+            "Name": "Forward 30",
+            "States": [
+                {
+                    "Image": "images/keys/forward_30"
+                }
+            ], 
+            "SupportedInMultiActions": true,
+            "Tooltip": "skip forward to 30 secound.", 
+            "UUID": "com.rgpaul.vlc.forward30"
+        },
+        {
+            "Icon": "images/actions/back_30", 
+            "Name": "Back 30",
+            "States": [
+                {
+                    "Image": "images/keys/back_30"
+                }
+            ], 
+            "SupportedInMultiActions": true,
+            "Tooltip": "skip back to 30 secound.", 
+            "UUID": "com.rgpaul.vlc.back30"
+        },
+        {
+            "Icon": "images/actions/fullscreen_toggle", 
+            "Name": "Fullscreen Toggle",
+            "States": [
+                {
+                    "Image": "images/keys/fullscreen_toggle"
+                }
+            ], 
+            "SupportedInMultiActions": true,
+            "Tooltip": "Switch full screen.", 
+            "UUID": "com.rgpaul.vlc.fullscreentoggle"
         }
     ], 
     "SDKVersion": 2,
-    "Author": "Ralph-Gordon Paul", 
+    "Author": "Ralph-Gordon Paul, (custom made by kilin)", 
     "CodePathWin": "vlc-remote.exe", 
     "CodePathMac": "vlc-remote", 
     "PropertyInspectorPath": "propertyinspector/index.html", 
-    "Description": "Remote controlling of VLC media player", 
+    "Description": "Remote controlling of VLC media player. custom made by kilin.", 
     "Name": "VLC Remote", 
     "Icon": "images/plugin",
     "Category": "VLC Remote",
     "CategoryIcon": "images/category",
     "URL": "https://github.com/RGPaul/streamdeck-vlc", 
-    "Version": "1.1.0",
+    "Version": "1.1.0-k1",
     "OS": [
         {
             "Platform": "mac", 

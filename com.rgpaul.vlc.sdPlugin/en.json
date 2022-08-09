@@ -33,5 +33,29 @@
   "com.rgpaul.vlc.volumedown": {
     "Name": "Volume Down", 
     "Tooltip": "Decrease the volume."
+  },
+  "com.rgpaul.vlc.volumemute": {
+    "Name": "Mute", 
+    "Tooltip": "Mute the volume."
+  },
+  "com.rgpaul.vlc.volume256": {
+    "Name": "Volume 256", 
+    "Tooltip": "volume change to 256."
+  },
+  "com.rgpaul.vlc.volume100": {
+    "Name": "Volume 100", 
+    "Tooltip": "volume change to 100."
+  },
+  "com.rgpaul.vlc.forward30": {
+    "Name": "Forward 30s", 
+    "Tooltip": "skip forward to 30 secound."
+  },
+  "com.rgpaul.vlc.back30": {
+    "Name": "Back 30s", 
+    "Tooltip": "skip back to 30 secound."
+  },
+  "com.rgpaul.vlc.fullscreentoggle": {
+    "Name": "Fullscreen Toggle", 
+    "Tooltip": "Switch full screen."
   }
 }
