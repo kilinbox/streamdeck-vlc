@@ -100,6 +100,54 @@ public:
 	 */
 	bool sendVolumeDown(nlohmann::json& outPayload) const;
 
+	/*!
+	 * @brief send volume mute command to vlc server
+	 * @param outPayload output parameter for status response payload on success and error payload on failure
+	 * 
+	 * @return true on success and and false on failure
+	 */
+	bool sendVolumeMute(nlohmann::json& outPayload) const;
+
+	/*!
+	 * @brief send volume change to 256 command to vlc server
+	 * @param outPayload output parameter for status response payload on success and error payload on failure
+	 * 
+	 * @return true on success and and false on failure
+	 */
+	bool sendVolume256(nlohmann::json& outPayload) const;
+
+	/*!
+	 * @brief send volume change to 100 command to vlc server
+	 * @param outPayload output parameter for status response payload on success and error payload on failure
+	 * 
+	 * @return true on success and and false on failure
+	 */
+	bool sendVolume100(nlohmann::json& outPayload) const;
+
+	/*!
+	 * @brief send fullscreen toggle command to vlc server
+	 * @param outPayload output parameter for status response payload on success and error payload on failure
+	 * 
+	 * @return true on success and and false on failure
+	 */
+	bool sendFullscreenToggle(nlohmann::json& outPayload) const;
+
+	/*!
+	 * @brief send skip forward to 30 secound command to vlc server
+	 * @param outPayload output parameter for status response payload on success and error payload on failure
+	 * 
+	 * @return true on success and and false on failure
+	 */
+	bool sendForward30(nlohmann::json& outPayload) const;
+
+	/*!
+	 * @brief send skip back to 30 secound command to vlc server
+	 * @param outPayload output parameter for status response payload on success and error payload on failure
+	 * 
+	 * @return true on success and and false on failure
+	 */
+	bool sendBack30(nlohmann::json& outPayload) const;
+
 private:
 
     std::string _host { "127.0.0.1" };

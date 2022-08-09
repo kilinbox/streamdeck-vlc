@@ -110,6 +110,36 @@ void VlcStreamDeckPlugin::KeyDownForAction(const std::string& inAction, const st
 	{
 		keyPressedVolumeDown(inPayload);
 	}
+	// Mute
+	else if (inAction == "com.rgpaul.vlc.volumemute")
+	{
+		keyPressedVolumeMute(inPayload);
+	}
+	// Volume 256
+	else if (inAction == "com.rgpaul.vlc.volume256")
+	{
+		keyPressedVolume256(inPayload);
+	}
+	// Volume 100
+	else if (inAction == "com.rgpaul.vlc.volume100")
+	{
+		keyPressedVolume100(inPayload);
+	}
+	// Forward 30
+	else if (inAction == "com.rgpaul.vlc.forward30")
+	{
+		keyPressedForward30(inPayload);
+	}
+	// Back 30
+	else if (inAction == "com.rgpaul.vlc.back30")
+	{
+		keyPressedBack30(inPayload);
+	}
+	//Fullscreen Toggle
+	else if (inAction == "com.rgpaul.vlc.fullscreentoggle")
+	{
+		keyPressedFullscreenToggle(inPayload);
+	}
 }
 
 void VlcStreamDeckPlugin::KeyUpForAction(const std::string& inAction, const std::string& inContext,
@@ -301,6 +331,54 @@ void VlcStreamDeckPlugin::keyPressedVolumeDown(const nlohmann::json &inPayload)
 	bool success = _vlcConnectionManager->sendVolumeDown(payload);
 
 	processVlcResponse("volume down", success, payload);
+}
+
+void VlcStreamDeckPlugin::keyPressedVolumeMute(const nlohmann::json &inPayload)
+{
+	nlohmann::json payload;
+	bool success = _vlcConnectionManager->sendVolumeMute(payload);
+
+	processVlcResponse("mute", success, payload);
+}
+
+void VlcStreamDeckPlugin::keyPressedVolume256(const nlohmann::json &inPayload)
+{
+	nlohmann::json payload;
+	bool success = _vlcConnectionManager->sendVolume256(payload);
+
+	processVlcResponse("volume 256", success, payload);
+}
+
+void VlcStreamDeckPlugin::keyPressedVolume100(const nlohmann::json &inPayload)
+{
+	nlohmann::json payload;
+	bool success = _vlcConnectionManager->sendVolume100(payload);
+
+	processVlcResponse("volume 100", success, payload);
+}
+
+void VlcStreamDeckPlugin::keyPressedForward30(const nlohmann::json &inPayload)
+{
+	nlohmann::json payload;
+	bool success = _vlcConnectionManager->sendForward30(payload);
+
+	processVlcResponse("Forward 30", success, payload);
+}
+
+void VlcStreamDeckPlugin::keyPressedBack30(const nlohmann::json &inPayload)
+{
+	nlohmann::json payload;
+	bool success = _vlcConnectionManager->sendBack30(payload);
+
+	processVlcResponse("Back 30", success, payload);
+}
+
+void VlcStreamDeckPlugin::keyPressedFullscreenToggle(const nlohmann::json &inPayload)
+{
+	nlohmann::json payload;
+	bool success = _vlcConnectionManager->sendFullscreenToggle(payload);
+
+	processVlcResponse("Fullscreen Toggle", success, payload);
 }
 
 void VlcStreamDeckPlugin::processVlcResponse(const std::string& functionName, bool success, 

@@ -128,6 +128,48 @@ bool VlcConnectionManager::sendVolumeDown(nlohmann::json& outPayload) const
     return sendGetRequest(target, outPayload);
 }
 
+bool VlcConnectionManager::sendVolumeMute(nlohmann::json& outPayload) const
+{
+    auto const target = "/requests/status.json?command=volume&val=0";
+    
+    return sendGetRequest(target, outPayload);
+}
+
+bool VlcConnectionManager::sendVolume256(nlohmann::json& outPayload) const
+{
+    auto const target = "/requests/status.json?command=volume&val=256";
+    
+    return sendGetRequest(target, outPayload);
+}
+
+bool VlcConnectionManager::sendVolume100(nlohmann::json& outPayload) const
+{
+    auto const target = "/requests/status.json?command=volume&val=100";
+    
+    return sendGetRequest(target, outPayload);
+}
+
+bool VlcConnectionManager::sendForward30(nlohmann::json& outPayload) const
+{
+    auto const target = "/requests/status.json?command=seek&val=+30S";
+    
+    return sendGetRequest(target, outPayload);
+}
+
+bool VlcConnectionManager::sendBack30(nlohmann::json& outPayload) const
+{
+    auto const target = "/requests/status.json?command=seek&val=-30S";
+    
+    return sendGetRequest(target, outPayload);
+}
+
+bool VlcConnectionManager::sendFullscreenToggle(nlohmann::json& outPayload) const
+{
+    auto const target = "/requests/status.json?command=fullscreen";
+    
+    return sendGetRequest(target, outPayload);
+}
+
 // ---------------------------------------------------------------------------------------------------------------------
 // Private
 // ---------------------------------------------------------------------------------------------------------------------

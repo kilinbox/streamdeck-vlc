@@ -78,6 +78,12 @@ private:
 	void keyPressedPrevious(const nlohmann::json& inPayload);
 	void keyPressedVolumeUp(const nlohmann::json& inPayload);
 	void keyPressedVolumeDown(const nlohmann::json& inPayload);
+	void keyPressedVolumeMute(const nlohmann::json& inPayload);
+	void keyPressedVolume256(const nlohmann::json& inPayload);
+	void keyPressedVolume100(const nlohmann::json& inPayload);
+	void keyPressedForward30(const nlohmann::json& inPayload);
+	void keyPressedBack30(const nlohmann::json& inPayload);
+	void keyPressedFullscreenToggle(const nlohmann::json& inPayload);
 
 	void processVlcResponse(const std::string& functionName, bool success, const nlohmann::json& payload);
 };
